@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -15,6 +14,8 @@ import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
 
 import Listeners.ExtentReportListener;
+import ReusabilityMethods.CommonMethods;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -61,15 +62,15 @@ public class HomePage extends ExtentReportListener{
 					
 					//select the org from the dropdown
 					WebElement  element= driver.findElement(By.xpath("//select[@id='ddlOrganizations'] "));
-					Select dropdown=new Select(element);
-					 dropdown.selectByIndex(1);
+					int index=1;
+					CommonMethods.SelectValueFromDropDown(element,index);
 					Thread.sleep(3000);
 					
 					//click on submit button
 					driver.findElement(By.xpath("//button[@id='btnSubmit']")).click();
 				
 				logInfo.pass("User has selected the organization");
-				Thread.sleep(3000);
+				Thread.sleep(16000);
 				logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 							
 				
@@ -83,29 +84,52 @@ public class HomePage extends ExtentReportListener{
 		
 		
 		
-		@Then("^Verify User is on the home page$")
+		@Then("^Verify user is on the homepage and click on Users$")
 		public void Verify_User_is_Home_page() 
 		{
-				ExtentTest logInfo=null;
-				try {
-											
-					logInfo=test.createNode(new GherkinKeyword("Then"), "User is on Home page");
-					WebDriverWait wait=new WebDriverWait(driver,20);
-					WebElement element=driver.findElement(By.xpath("//li[.=' Organization Settings ']"));
-					wait.until(ExpectedConditions.visibilityOf(element));
-					logInfo.pass("User is on Home page");
-					logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
-				    
-				    
-				} catch (AssertionError | Exception e) {
-					testStepHandle("FAIL",driver,logInfo,e);
-					
-				}
+			ExtentTest logInfo=null;
+			try {
 				
+				logInfo=test.createNode(new GherkinKeyword("Then"), "Verify user is on the homepage and click on Users");
+				WebElement users=driver.findElement(By.xpath("//span[text()='Users']"));
+				WebDriverWait wait= new WebDriverWait(driver,120);
+				wait.until(ExpectedConditions.visibilityOf(users));
+				users.click();
+				logInfo.pass("User is on the homepage and he is into Users tab");
+				Thread.sleep(5000);
+				logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
+			}
+			
+			catch (AssertionError | Exception e) {
+				testStepHandle("FAIL",driver,logInfo,e);
+				
+			}
 			
 		}
 			
 		
+		@And("^Verify user is on the Users page$")
+		public void click_UsersButton()
+		{
+			ExtentTest logInfo=null;
+			try {
+				
+				logInfo=test.createNode(new GherkinKeyword("And"), "Verify user is on the Users page");
+				WebElement searchBox=driver.findElement(By.xpath("//input[@id='mat-input-0']"));
+				WebDriverWait wait= new WebDriverWait(driver,120);
+				wait.until(ExpectedConditions.visibilityOf(searchBox));
+				logInfo.pass("user is on the Users page");
+				Thread.sleep(5000);
+				logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
+				
+			}
+			
+			catch (AssertionError | Exception e) {
+				testStepHandle("FAIL",driver,logInfo,e);
+				
+			}
+			
+		}
 		
 		
 		

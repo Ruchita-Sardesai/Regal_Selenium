@@ -7,12 +7,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-/*public class browserUtility {
+public class browserUtility {
 
 
 	public static WebDriver OpenBrowser(WebDriver driver,String browserName,String url) throws InterruptedException
 	{
-		if(browserName.equals("Chrome"))
+		if(browserName.equalsIgnoreCase("Chrome"))
 		{
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized"); //to maximize the browser
@@ -22,7 +22,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 			//Open the browser
 			System.setProperty("webdriver.chrome.driver", "D:\\Chethan\\Timesheet_Project\\drivers\\chromedriver.exe");
 			driver=new ChromeDriver(options);
-			return driver;
+			driver.get(url);
+			//return driver;
 			
 		}
 		
@@ -49,4 +50,4 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 	}
 		
 	
-} */
+} 

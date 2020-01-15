@@ -1,7 +1,6 @@
 package ReusabilityMethods;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -22,10 +21,10 @@ public class  CommonMethods  {
 	}
 
 
-	public static void SelectValueFromDropDown(WebElement element, String value)
+	public static void SelectValueFromDropDown(WebElement element, int index)
 	{
 		Select select=new Select(element);
-		select.selectByVisibleText(value);
+		select.selectByIndex(index);
 	}
 	
 	
