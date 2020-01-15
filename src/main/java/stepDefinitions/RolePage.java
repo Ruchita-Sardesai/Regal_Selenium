@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+//import cucumber.runtime.java.StepDefAnnotation;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
@@ -16,11 +17,13 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
+//@StepDefAnnotation
+
 public class RolePage extends ExtentReportListener {
 
 	public static WebDriver driver;
 	
-	@Given("^Click on Add role button$")
+	@Given("^Click on roles button$")
 	
 	public void Navigate_to_Roles() 
 	{
@@ -44,13 +47,13 @@ public class RolePage extends ExtentReportListener {
 	}
 		
 
-    @Then("^Click on Add role button")
+    @Then("^Click on Add role button$")
     
     public void Add_Role()
     {
     	ExtentTest logInfo=null;
     	try {
-    		logInfo= test.createNode(new GherkinKeyword("Given"), "Click on Add Role button");
+    		logInfo= test.createNode(new GherkinKeyword("Then"), "Click on Add Role button");
     		WebElement AddRoles_Btn= driver.findElement(By.xpath("//input[@text='Add Role]"));
     		WebDriverWait wait=new WebDriverWait(driver,120);
 			 wait.until(ExpectedConditions.visibilityOf(AddRoles_Btn));
@@ -63,13 +66,13 @@ public class RolePage extends ExtentReportListener {
 			
     	}
     
-@Then("^Add the role name")
+@Then("^Add the role name$")
     
     public void RoleName()
     {
     	ExtentTest logInfo=null;
     	try {
-    		logInfo= test.createNode(new GherkinKeyword("Given"), "Add the role name");
+    		logInfo= test.createNode(new GherkinKeyword("Then"), "Add the role name");
     		WebElement RoleName= driver.findElement(By.xpath(""));
     		WebDriverWait wait=new WebDriverWait(driver,120);
 			 wait.until(ExpectedConditions.visibilityOf(RoleName));
@@ -82,12 +85,12 @@ public class RolePage extends ExtentReportListener {
 			
     	}
 
-@Then("^select the role level")
+@Then("^select the role level$")
 public void RoleLevel()
 {
 	ExtentTest logInfo=null;
 	try {
-		logInfo= test.createNode(new GherkinKeyword("Given"), "select the role level");
+		logInfo= test.createNode(new GherkinKeyword("Then"), "select the role level");
 		WebElement RoleLevel= driver.findElement(By.xpath(""));
 		WebDriverWait wait=new WebDriverWait(driver,120);
 		 wait.until(ExpectedConditions.visibilityOf(RoleLevel));
@@ -100,12 +103,12 @@ public void RoleLevel()
 		
 	}
 
-@Then("^select the role permissions")
+@Then("^select the role permissions$")
 public void Rolepermissions()
 {
 	ExtentTest logInfo=null;
 	try {
-		logInfo= test.createNode(new GherkinKeyword("Given"), "select the role permissions");
+		logInfo= test.createNode(new GherkinKeyword("Then"), "select the role permissions");
 		WebElement Rolepermissions= driver.findElement(By.xpath(""));
 		WebDriverWait wait=new WebDriverWait(driver,120);
 		 wait.until(ExpectedConditions.visibilityOf(Rolepermissions));
@@ -118,12 +121,12 @@ public void Rolepermissions()
 		
 	}
 
-@And("^click on Save button")
+@And("^click on Save button$")
 public void SaveRole()
 {
 	ExtentTest logInfo=null;
 	try {
-		logInfo= test.createNode(new GherkinKeyword("Given"), "click on Save button");
+		logInfo= test.createNode(new GherkinKeyword("And"), "click on Save button");
 		WebElement SaveRole= driver.findElement(By.xpath(""));
 		WebDriverWait wait=new WebDriverWait(driver,120);
 		 wait.until(ExpectedConditions.visibilityOf(SaveRole));
