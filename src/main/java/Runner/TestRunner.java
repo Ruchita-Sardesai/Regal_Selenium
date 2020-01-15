@@ -13,7 +13,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(
-        features = "src/main/java/Features" , tags="@Homepage" ,
+        features = "src/main/java/Features" , tags="@Login,@HomePage,@Userspage" ,
         glue = {"stepDefinitions"},
       //  tags = {"@Regression"},
         strict=true,
