@@ -8,7 +8,7 @@
     <classes>
       <class name="Runner.TestRunner">
         <methods>
-          <include name="feature" invocation-numbers="2"/>
+          <include name="feature" invocation-numbers="0"/>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
         </methods>

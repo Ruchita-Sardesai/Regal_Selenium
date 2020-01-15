@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OrgAdmin</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 15 14:15:59 IST 2020</td>
+<td>Started on:</td><td>Wed Jan 15 17:35:58 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>168 seconds (168126 ms)</td>
+<tr><td>Total time:</td><td>88 seconds (88603 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,7 +75,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Add users</td>
+<td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Home page feature</td>
 <td><div><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at Runner.TestRunner.feature(TestRunner.java:39)
@@ -86,10 +86,10 @@ function toggleAllBoxes() {
 Caused by: java.lang.NullPointerException
 	at Listeners.ExtentReportListener.captureScreenShot(ExtentReportListener.java:77)
 	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:52)
-	at stepDefinitions.UsersPage.Getin_to_Home_page(UsersPage.java:38)
-	at ?.Given Click on Add users button(usersPage.feature:6)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2021474493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2021474493'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:80)
+	at ?.Given User is on the home page(Homepage.feature:8)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1383012009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1383012009'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at Runner.TestRunner.feature(TestRunner.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -115,8 +115,8 @@ Caused by: java.lang.NullPointerException
 Caused by: java.lang.NullPointerException
 	at Listeners.ExtentReportListener.captureScreenShot(ExtentReportListener.java:77)
 	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:52)
-	at stepDefinitions.UsersPage.Getin_to_Home_page(UsersPage.java:38)
-	at ?.Given Click on Add users button(usersPage.feature:6)
+	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:80)
+	at ?.Given User is on the home page(Homepage.feature:8)
 </pre></div></td>
 <td>0</td>
 <td>Runner.TestRunner@4c1d9d4b</td></tr>
@@ -129,14 +129,9 @@ Caused by: java.lang.NullPointerException
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Home page feature</td>
-<td></td>
-<td>88</td>
-<td>Runner.TestRunner@4c1d9d4b</td></tr>
-<tr>
 <td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Org Admin Login feature</td>
 <td></td>
-<td>78</td>
+<td>87</td>
 <td>Runner.TestRunner@4c1d9d4b</td></tr>
 </table><p>
 </body>

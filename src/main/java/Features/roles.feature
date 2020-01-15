@@ -1,19 +1,22 @@
-@Homepage
-Feature: Home page feature
+@RolePage
+Feature: Add Roles
 
-@user3
-Scenario Outline: Home page feature
+Scenario Outline: Verify user is able to Add role
+
+Given Click on roles button
+Then Click on Add role button
+Then Add the role name
+Then select the role level
+Then select the role permissions
+And click on Save button
 
 //Prequisities
 Given User is on the home page
-Then Verify user is on the homepage
-And Click on users button
+Then Verify user is on the homepage and click on Users
 And Verify user is on the Users page
 
-
-
-
-
 Examples:
-    | Email | Password |
-    | abhishek@regal-us.com | Abhi@123  |
+    | Email |
+    | abhishek@regal-us.com |
+
+ 

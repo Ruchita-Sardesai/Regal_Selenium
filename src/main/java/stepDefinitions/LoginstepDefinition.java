@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+
 import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
@@ -17,7 +18,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
-import com.testautomation.Utility.browserUtility;
+
 
 import Listeners.ExtentReportListener;
 import cucumber.api.java.en.And;
@@ -49,7 +50,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				options.addArguments("version");//to get the version of Google Chrome
 				
 				//Open the browser
-				System.setProperty("webdriver.chrome.driver", "D:\\Chethan\\Timesheet_Project\\drivers\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\ruchi\\NEW_WorkPlace\\OrgAdmin\\drivers\\chromedriver.exe");
 				driver=new ChromeDriver(options);
 				driver.get("https://org-app.regalpayone.com/login"); 
 			  /*  browserUtility.OpenBrowser(driver, "chrome", "https://org-app.regalpayone.com/login"); */

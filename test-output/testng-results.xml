@@ -1,46 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-15T08:45:59Z" name="BDD Test Suite" finished-at="2020-01-15T08:48:47Z" duration-ms="168126">
+  <suite started-at="2020-01-15T12:05:58Z" name="BDD Test Suite" finished-at="2020-01-15T12:07:26Z" duration-ms="88603">
     <groups>
       <group name="cucumber">
         <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@4c1d9d4b]" name="feature" class="Runner.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-01-15T08:45:59Z" name="OrgAdmin" finished-at="2020-01-15T08:48:47Z" duration-ms="168126">
+    <test started-at="2020-01-15T12:05:58Z" name="OrgAdmin" finished-at="2020-01-15T12:07:26Z" duration-ms="88603">
       <class name="Runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T08:45:59Z" name="setUpClass" finished-at="2020-01-15T08:46:00Z" duration-ms="583" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T12:05:58Z" name="setUpClass" finished-at="2020-01-15T12:05:58Z" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T08:46:00Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-15T08:47:29Z" duration-ms="88697" status="PASS">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T12:05:59Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-15T12:05:59Z" duration-ms="439" status="FAIL">
           <params>
             <param index="0">
               <value>
                 <![CDATA[Home page feature]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T08:47:29Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-15T08:48:47Z" duration-ms="78094" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Org Admin Login feature]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T08:48:47Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-15T08:48:47Z" duration-ms="40" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Add users]]>
               </value>
             </param>
           </params>
@@ -75,15 +53,26 @@ at java.base/java.lang.Thread.run(Thread.java:835)
 Caused by: java.lang.NullPointerException
 at Listeners.ExtentReportListener.captureScreenShot(ExtentReportListener.java:77)
 at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:52)
-at stepDefinitions.UsersPage.Getin_to_Home_page(UsersPage.java:38)
-at ✽.Given Click on Add users button(usersPage.feature:6)
+at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:80)
+at ✽.Given User is on the home page(Homepage.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T08:48:47Z" name="tearDownClass" finished-at="2020-01-15T08:48:47Z" duration-ms="23" status="PASS">
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T12:05:59Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-15T12:07:26Z" duration-ms="87105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Org Admin Login feature]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestRunner@4c1d9d4b]" started-at="2020-01-15T12:07:26Z" name="tearDownClass" finished-at="2020-01-15T12:07:26Z" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
