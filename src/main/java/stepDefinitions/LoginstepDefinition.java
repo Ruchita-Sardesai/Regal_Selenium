@@ -17,6 +17,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
+import com.testautomation.Utility.browserUtility;
 
 import Listeners.ExtentReportListener;
 import cucumber.api.java.en.And;
@@ -42,7 +43,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				
 			  logInfo=test.createNode(new GherkinKeyword("Given"), "User should open the browser");
 			     
-			     ChromeOptions options = new ChromeOptions();
+			   ChromeOptions options = new ChromeOptions();
 				options.addArguments("start-maximized"); //to maximize the browser
 				options.addArguments("disable-infobars"); // to disable the infobars
 				options.addArguments("version");//to get the version of Google Chrome
@@ -50,7 +51,8 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				//Open the browser
 				System.setProperty("webdriver.chrome.driver", "D:\\Chethan\\Timesheet_Project\\drivers\\chromedriver.exe");
 				driver=new ChromeDriver(options);
-				driver.get("https://org-app.regalpayone.com/login");
+				driver.get("https://org-app.regalpayone.com/login"); 
+			  /*  browserUtility.OpenBrowser(driver, "chrome", "https://org-app.regalpayone.com/login"); */
 				Thread.sleep(3000);
 				driver.findElement(By.xpath("//button[@id='details-button']")).click();
 				Thread.sleep(3000);
@@ -86,7 +88,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 			logInfo=test.createNode(new GherkinKeyword("When"), "Title of login page matches");
 			String Expected_title = "RegalPay Organization Admin App";
 		    String Actual_title = driver.getTitle();
-		    if(Expected_title.contains(Actual_title))
+		    if(Actual_title.contains(Expected_title))
 		    {
 			System.out.println(Actual_title);
 			logInfo.pass("Title of login page matched");
