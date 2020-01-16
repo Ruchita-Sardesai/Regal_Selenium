@@ -50,7 +50,8 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				options.addArguments("version");//to get the version of Google Chrome
 				
 				//Open the browser
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\ruchi\\NEW_WorkPlace\\OrgAdmin\\drivers\\chromedriver.exe");
+				//System.setProperty("webdriver.chrome.driver", "C:\\Users\\ruchi\\NEW_WorkPlace\\OrgAdmin\\drivers\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 				driver=new ChromeDriver(options);
 				driver.get("https://org-app.regalpayone.com/login"); 
 			  /*  browserUtility.OpenBrowser(driver, "chrome", "https://org-app.regalpayone.com/login"); */
