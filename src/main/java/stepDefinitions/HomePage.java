@@ -3,8 +3,6 @@ package stepDefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,6 +10,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
+import com.testautomation.Utility.WebDriverFactory;
 
 import Listeners.ExtentReportListener;
 import ReusabilityMethods.CommonMethods;
@@ -22,9 +21,16 @@ import cucumber.api.java.en.Then;
 public class HomePage extends ExtentReportListener{
 
 	
-		public static WebDriver driver;
-		
-		   
+	WebDriverFactory webDriverFactory;
+	public static WebDriver driver;
+	
+	
+	public HomePage (WebDriverFactory DriverFactory) throws Exception
+	{
+		super();
+		webDriverFactory = new WebDriverFactory();
+	}
+	
 		
 		@Given("^User is on the home page$")
 		public void Getin_to_Home_page() 
@@ -35,18 +41,12 @@ public class HomePage extends ExtentReportListener{
 			ExtentTest logInfo=null;
 			try {
 									
-				     logInfo=test.createNode(new GherkinKeyword("Given"), "User is on the home page");
+				    logInfo=test.createNode(new GherkinKeyword("Given"), "User is on the home page");
 				
-				     ChromeOptions options = new ChromeOptions();
-					options.addArguments("start-maximized"); //to maximize the browser
-					options.addArguments("disable-infobars"); // to disable the infobars
-					options.addArguments("version");//to get the version of Google Chrome
-					
-					//Open the browser and go into the org selection page
-					System.setProperty("webdriver.chrome.driver", "D:\\Chethan\\Timesheet_Project\\drivers\\chromedriver.exe");
-					driver=new ChromeDriver(options);
-					driver.get("https://org-app.regalpayone.com/login");
+					WebDriverFactory.OpenBrowser( "chrome", "https://org-app.regalpayone.com/login"); 
 					Thread.sleep(3000);
+
+					this.driver = webDriverFactory.driver;
 					driver.findElement(By.xpath("//button[@id='details-button']")).click();
 					Thread.sleep(3000);
 					driver.findElement(By.xpath("//a[@id='proceed-link']")).click();

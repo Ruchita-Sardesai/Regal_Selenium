@@ -1,4 +1,4 @@
-@HomePage
+@BHomePage
 Feature: Home page feature
 
 @user3
