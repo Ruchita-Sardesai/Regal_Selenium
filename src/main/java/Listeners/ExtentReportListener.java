@@ -49,7 +49,8 @@ public class ExtentReportListener {
 			extenttest.error(throwable.fillInStackTrace());
 			
 			try {
-				extenttest.addScreenCaptureFromPath(captureScreenShot(driver));
+				String screenshotpath=captureScreenShot(driver);
+				extenttest.addScreenCaptureFromPath(screenshotpath);
 				} catch (IOException e) {
 				e.printStackTrace();
 				}
@@ -75,7 +76,7 @@ public class ExtentReportListener {
 	public static String captureScreenShot(WebDriver driver) throws IOException {
 		TakesScreenshot screen = (TakesScreenshot) driver;
 		File src = screen.getScreenshotAs(OutputType.FILE);
-		String dest = "./Screenshots/" + getcurrentdateandtime() + ".png";
+				String dest = System.getProperty("user.dir") + "/screenshots/" + getcurrentdateandtime() + ".png";
 		File target = new File(dest);
 		FileUtils.copyFile(src, target);
 		return dest;
