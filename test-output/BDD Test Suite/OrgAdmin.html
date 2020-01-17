@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OrgAdmin</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 16 18:01:16 IST 2020</td>
+<td>Started on:</td><td>Fri Jan 17 11:53:43 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>77 seconds (77822 ms)</td>
+<tr><td>Total time:</td><td>185 seconds (185801 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,60 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Home page feature</td>
-<td><div><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at Runner.TestRunner.feature(TestRunner.java:33)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:835)
-Caused by: java.lang.NullPointerException
-	at Listeners.ExtentReportListener.captureScreenShot(ExtentReportListener.java:77)
-	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:52)
-	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:84)
-	at ?.Given User is on the home page(Homepage.feature:8)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace518104224", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace518104224'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at Runner.TestRunner.feature(TestRunner.java:33)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:835)
-Caused by: java.lang.NullPointerException
-	at Listeners.ExtentReportListener.captureScreenShot(ExtentReportListener.java:77)
-	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:52)
-	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:84)
-	at ?.Given User is on the home page(Homepage.feature:8)
-</pre></div></td>
-<td>1</td>
-<td>Runner.TestRunner@419c5f1a</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -129,9 +75,14 @@ Caused by: java.lang.NullPointerException
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Home page feature</td>
+<td></td>
+<td>93</td>
+<td>Runner.TestRunner@419c5f1a</td></tr>
+<tr>
 <td title='Runner.TestRunner.feature()'><b>feature</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Org Admin Login feature</td>
 <td></td>
-<td>75</td>
+<td>90</td>
 <td>Runner.TestRunner@419c5f1a</td></tr>
 </table><p>
 </body>

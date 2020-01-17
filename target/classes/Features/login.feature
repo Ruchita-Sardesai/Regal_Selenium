@@ -8,7 +8,7 @@ Scenario Outline: Org admin login with valid credentials
 //Prequisities
 Given User should open the browser
 When Title of login page matches
-Then User Enters the "<Email>" and "<Password>"
+Then User Enters the valid credentials
 And User clicks on login button
 And Verify user is on selection Page
 Then Close the browser 
@@ -25,7 +25,7 @@ Scenario Outline: Org admin login with invalid credentials
 //Prequisities
 Given User should open the browser
 When Title of login page matches
-Then User Enters the "<Email>" and "<Password>"
+Then User Enters the invalid credentials
 And User clicks on login button
 And Verify Invalid UserName and credentials error message
 Then Close the browser 

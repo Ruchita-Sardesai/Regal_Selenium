@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-BDD_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">BDD Test Suite</span>
+              <span class="suite-name border-passed">BDD Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-BDD_Test_Suite" class="hide-methods failed suite-BDD_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-BDD_Test_Suite -->
-                      <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods failed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods failed suite-BDD_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-BDD_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" class="method navigator-link" hash-for-method="feature(Home page feature)">feature(Home page feature)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-BDD_Test_Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +100,11 @@
                       <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods passed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods passed suite-BDD_Test_Suite -->
                     </span>
                     <div class="method-list-content passed suite-BDD_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" class="method navigator-link" hash-for-method="feature(Home page feature)">feature(Home page feature)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" class="method navigator-link" hash-for-method="feature(Org Admin Login feature)">feature(Org Admin Login feature)</a> <!-- method navigator-link -->
@@ -131,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-BDD_Test_Suite" class="panel BDD_Test_Suite">
-          <div class="suite-BDD_Test_Suite-class-failed">
+          <div class="suite-BDD_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">Runner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -143,32 +134,10 @@
                   </a> <!-- feature(Home page feature) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Home page feature)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.NullPointerException
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at Runner.TestRunner.feature(TestRunner.java:33)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:835)
-Caused by: java.lang.NullPointerException
-	at Listeners.ExtentReportListener.captureScreenShot(ExtentReportListener.java:77)
-	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:52)
-	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:84)
-	at ✽.Given User is on the home page(Homepage.feature:8)
-... Removed 16 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-BDD_Test_Suite-class-failed -->
-          <div class="suite-BDD_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Runner.TestRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="feature(Org Admin Login feature)">
@@ -248,16 +217,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'Runner.TestRunner')
-data.setCell(0, 3, 75115);
+data.setCell(0, 3, 93989);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'feature')
 data.setCell(1, 2, 'Runner.TestRunner')
-data.setCell(1, 3, 1345);
+data.setCell(1, 3, 90710);
 window.suiteTableData['BDD_Test_Suite']= { tableData: data, tableDiv: 'times-div-BDD_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-BDD_Test_Suite">
               </div> <!-- times-div-BDD_Test_Suite -->
             </div> <!-- times-div -->
@@ -289,18 +258,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">feature(Home page feature)</span>
-                <span class="method-start">957 ms</span>
+                <span class="method-start">733 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Org Admin Login feature)</span>
-                <span class="method-start">2311 ms</span>
+                <span class="method-start">94726 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">77429 ms</span>
+                <span class="method-start">185448 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

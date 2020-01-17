@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 16, 2020 06:01:17 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jan 17, 2020 11:53:44 AM</span>
 				</a>
 			</li>
 			<li>
@@ -155,10 +155,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='92.308%'><span class='strong'>12</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='93.333%'><span class='strong'>14</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='7.692%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='6.667%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -172,29 +172,220 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Home Page feature</span>
-						<span class='test-time'>Jan 16, 2020 06:01:18 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Jan 17, 2020 11:53:45 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 1s+111ms</span>
+<div class='scenario node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 1m 28s+421ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Home Page Scenario</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given fail' status='fail'>
+		<li test-id='3' class='node given pass' status='pass'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">User is on the home page</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115506463.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>User has selected the organization</div>
+			
+		</li>
+		<li test-id='4' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Verify user is on the homepage and click on Users</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115513232.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>User is on the homepage and he is into Users tab</div>
+			
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">Verify user is on the Users page</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115518807.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>user is on the Users page</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Org Admin Login feature</span>
+						<span class='test-time'>Jan 17, 2020 11:55:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='7' status='pass'>
+	<span class='duration right label'>0h 0m 47s+319ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Org admin login Scenario</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='8' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">User should open the browser</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115543384.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>Opened chrome browser and entered url</div>
+			
+		</li>
+		<li test-id='9' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">Title of login page matches</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115543718.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>Title of login page matched</div>
+			
+		</li>
+		<li test-id='10' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">User Enters the Email and Password</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115559266.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>User Entered the email and password</div>
+			
+		</li>
+		<li test-id='11' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">User clicks on login button</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115605159.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>User clicks on login button</div>
+			
+		</li>
+		<li test-id='12' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">Verify user is on selection Page</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115605561.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>Title of selection page matched</div>
+			
+		</li>
+		<li test-id='13' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Close the browser</span>
+				<div class='pre'>Closing the browser</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Org Admin Login feature</span>
+						<span class='test-time'>Jan 17, 2020 11:56:06 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='15' status='fail'>
+	<span class='duration right label'>0h 0m 43s+152ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Org admin login Scenario</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='16' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">User should open the browser</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115631787.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>Opened chrome browser and entered url</div>
+			
+		</li>
+		<li test-id='17' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">Title of login page matches</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115632116.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>Title of login page matched</div>
+			
+		</li>
+		<li test-id='18' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">User Enters the Email and Password</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115642029.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>User Entered the email and password</div>
+			
+		</li>
+		<li test-id='19' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">User clicks on login button</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115648155.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+				<div class='pre'>User clicks on login button</div>
+			
+		</li>
+		<li test-id='20' class='node and fail' status='fail'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">Verify Invalid UserName and credentials error message</span>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="./Screenshots/01172020115648654.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
 				<div class='pre'><span class='label white-text red'>Test Case is Failed : </span></div>
-				<div class='pre'><pre>java.lang.IllegalStateException: The driver executable does not exist: D:\Chethan\Timesheet_Project\drivers\chromedriver.exe
+				<div class='pre'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div//strong[text()='Error']//following::div//ul/li"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-TMBMQE6', ip: '169.254.191.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ruchi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54723}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 18b4086ece93c1e1911d2c85b0fde372
+*** Element info: {Using=xpath, value=//div//strong[text()='Error']//following::div//ul/li}
 	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:49)
-	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:84)
+	at stepDefinitions.LoginstepDefinition.Verify_Invalid_UserName_and_credentials_error_message(LoginstepDefinition.java:195)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -235,165 +426,7 @@
 </pre></div>
 			
 		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='4'>
-					<div class='test-heading'>
-						<span class='test-name'>Org Admin Login feature</span>
-						<span class='test-time'>Jan 16, 2020 06:01:19 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='scenario node' test-id='5' status='pass'>
-	<span class='duration right label'>0h 0m 39s+155ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Org admin login Scenario</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='6' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">User should open the browser</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180141221.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>Opened chrome browser and entered url</div>
-			
-		</li>
-		<li test-id='7' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">Title of login page matches</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180141556.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>Title of login page matched</div>
-			
-		</li>
-		<li test-id='8' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">User Enters the Email and Password</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180151395.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>User Entered the email and password</div>
-			
-		</li>
-		<li test-id='9' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">User clicks on login button</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180157637.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>User clicks on login button</div>
-			
-		</li>
-		<li test-id='10' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">Verify user is on selection Page</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180158058.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>Title of selection page matched</div>
-			
-		</li>
-		<li test-id='11' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Close the browser</span>
-				<div class='pre'>Closing the browser</div>
-			
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='12'>
-					<div class='test-heading'>
-						<span class='test-name'>Org Admin Login feature</span>
-						<span class='test-time'>Jan 16, 2020 06:01:58 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='scenario node' test-id='13' status='pass'>
-	<span class='duration right label'>0h 0m 35s+947ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Org admin login Scenario</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='14' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">User should open the browser</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180219710.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>Opened chrome browser and entered url</div>
-			
-		</li>
-		<li test-id='15' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">Title of login page matches</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180220052.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>Title of login page matched</div>
-			
-		</li>
-		<li test-id='16' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">User Enters the Email and Password</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180229946.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>User Entered the email and password</div>
-			
-		</li>
-		<li test-id='17' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">User clicks on login button</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180232653.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>User clicks on login button</div>
-			
-		</li>
-		<li test-id='18' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">Verify Invalid UserName and credentials error message</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\ruchi\NEW_WorkPlace\Screenshots\01162020180234027.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'>Error message mathched</div>
-			
-		</li>
-		<li test-id='19' class='node then pass' status='pass'>
+		<li test-id='21' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -458,7 +491,7 @@
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.IllegalStateException</span>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
                                 <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
@@ -473,11 +506,19 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Jan 16, 2020 06:01:18 PM</td>
-                                                        <td class='linked' test-id='3'>Home Page feature.Home Page Scenario.User is on the home page</td>
-                                                        <td><pre><pre>java.lang.IllegalStateException: The driver executable does not exist: D:\Chethan\Timesheet_Project\drivers\chromedriver.exe
+                                                        <td>Jan 17, 2020 11:56:48 AM</td>
+                                                        <td class='linked' test-id='20'>Org Admin Login feature.Org admin login Scenario.Verify Invalid UserName and credentials error message</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div//strong[text()='Error']//following::div//ul/li"}
+  (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-TMBMQE6', ip: '169.254.191.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\ruchi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54723}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 18b4086ece93c1e1911d2c85b0fde372
+*** Element info: {Using=xpath, value=//div//strong[text()='Error']//following::div//ul/li}
 	at Listeners.ExtentReportListener.testStepHandle(ExtentReportListener.java:49)
-	at stepDefinitions.HomePage.Getin_to_Home_page(HomePage.java:84)
+	at stepDefinitions.LoginstepDefinition.Verify_Invalid_UserName_and_credentials_error_message(LoginstepDefinition.java:195)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -553,25 +594,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>13</div>
+					<div class='panel-lead'>15</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 16, 2020 06:01:17 PM</div>
+					<div class='panel-lead'>Jan 17, 2020 11:53:44 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 16, 2020 06:02:34 PM</div>
+			 		<div class='panel-lead'>Jan 17, 2020 11:56:49 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>77,534ms</div>
+					<div class='panel-lead'>185,560ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -625,7 +666,7 @@
 				infoChild: 0,
 				exceptionsChild: 1,
 				
-				passGrandChild: 12,
+				passGrandChild: 14,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

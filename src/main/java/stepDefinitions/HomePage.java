@@ -45,7 +45,7 @@ public class HomePage extends ExtentReportListener{
 					options.addArguments("version");//to get the version of Google Chrome
 					
 					//Open the browser and go into the org selection page
-					System.setProperty("webdriver.chrome.driver", "D:\\Chethan\\Timesheet_Project\\drivers\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 					driver=new ChromeDriver(options);
 					driver.get("https://org-app.regalpayone.com/login");
 					Thread.sleep(3000);
