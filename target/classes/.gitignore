@@ -1,8 +1,6 @@
-/META-INF/
-/Features/
-/Runner/
-/stepDefinitions/
+/ReadExcelData/
 /ReusabilityMethods/
+/stepDefinitions/
 /com/
 /Listeners/
-/Objects/
+/Features/

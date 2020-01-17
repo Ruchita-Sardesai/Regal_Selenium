@@ -21,6 +21,7 @@ import com.aventstack.extentreports.gherkin.model.Scenario;
 
 
 import Listeners.ExtentReportListener;
+import ReusabilityMethods.ExcelDataConfig;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -30,9 +31,9 @@ import cucumber.api.java.en.When;
 public class LoginstepDefinition  extends ExtentReportListener{
 	
 	public static WebDriver driver;
+	ExcelDataConfig excel=new ExcelDataConfig("C:\\\\Users\\\\ruchi\\\\NEW_WorkPlace\\\\Excel Data\\\\TestData(2).xlsx");
 	
-	 
-	@Given("^User should open the browser$")
+	 	@Given("^User should open the browser$")
 	public void Login_Button() 
 	{
 		
@@ -50,7 +51,8 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				options.addArguments("version");//to get the version of Google Chrome
 				
 				//Open the browser
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\ruchi\\NEW_WorkPlace\\OrgAdmin\\drivers\\chromedriver.exe");
+				//System.setProperty("webdriver.chrome.driver", "C:\\Users\\ruchi\\NEW_WorkPlace\\OrgAdmin\\drivers\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 				driver=new ChromeDriver(options);
 				driver.get("https://org-app.regalpayone.com/login"); 
 			  /*  browserUtility.OpenBrowser(driver, "chrome", "https://org-app.regalpayone.com/login"); */
@@ -105,7 +107,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	
 	
-	@Then("^User Enters the \"(.*)\" and \"(.*)\"$")
+	@Then("^User Enters the valid credentials")
 	public void Enter_Credentials(String Email,String Password) 
 	{
 		ExtentTest logInfo=null;
@@ -113,8 +115,8 @@ public class LoginstepDefinition  extends ExtentReportListener{
 									
 		logInfo=test.createNode(new GherkinKeyword("Then"), "User Enters the Email and Password");
 		Thread.sleep(9000);
-		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(Email);
-		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(Password);
+		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 0, 0));
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 0, 1));
 		logInfo.pass("User Entered the email and password");
 		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
@@ -126,6 +128,25 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	}
 	
+	@Then("^User Enters the invalid credentials")
+	public void Enter_invalidCredentials(String Email,String Password) 
+	{
+		ExtentTest logInfo=null;
+		try {
+									
+		logInfo=test.createNode(new GherkinKeyword("Then"), "User Enters the Email and Password");
+		Thread.sleep(9000);
+		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 1, 0));
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 1, 1));
+		logInfo.pass("User Entered the email and password");
+		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
+		
+		} catch (AssertionError | Exception e) {
+			testStepHandle("FAIL",driver,logInfo,e);
+			
+		}		
+	
+	}
 	
 	
 	@And("^User clicks on login button$")

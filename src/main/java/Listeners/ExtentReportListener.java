@@ -75,7 +75,7 @@ public class ExtentReportListener {
 	public static String captureScreenShot(WebDriver driver) throws IOException {
 		TakesScreenshot screen = (TakesScreenshot) driver;
 		File src = screen.getScreenshotAs(OutputType.FILE);
-		String dest = "C:\\Users\\ruchi\\NEW_WorkPlace\\Screenshots\\" + getcurrentdateandtime() + ".png";
+		String dest = "./Screenshots/" + getcurrentdateandtime() + ".png";
 		File target = new File(dest);
 		FileUtils.copyFile(src, target);
 		return dest;
