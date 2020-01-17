@@ -8,7 +8,11 @@
     <classes>
       <class name="Runner.TestRunner">
         <methods>
+<<<<<<< HEAD
           <include name="feature"/>
+=======
+          <include name="feature" invocation-numbers="1"/>
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
         </methods>

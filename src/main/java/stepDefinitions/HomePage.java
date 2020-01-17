@@ -14,6 +14,7 @@ import com.testautomation.Utility.WebDriverFactory;
 
 import Listeners.ExtentReportListener;
 import ReusabilityMethods.CommonMethods;
+import ReusabilityMethods.ExcelDataConfig;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -42,8 +43,22 @@ public class HomePage extends ExtentReportListener{
 			try {
 									
 				    logInfo=test.createNode(new GherkinKeyword("Given"), "User is on the home page");
+<<<<<<< HEAD
 				
 					WebDriverFactory.OpenBrowser( "chrome", "https://org-app.regalpayone.com/login"); 
+=======
+				    ExcelDataConfig excel=new ExcelDataConfig("C:\\\\Users\\\\ruchi\\\\NEW_WorkPlace\\\\Excel Data\\\\TestData(2).xlsx");
+				    
+				    ChromeOptions options = new ChromeOptions();
+					options.addArguments("start-maximized"); //to maximize the browser
+					options.addArguments("disable-infobars"); // to disable the infobars
+					options.addArguments("version");//to get the version of Google Chrome
+					
+					//Open the browser and go into the org selection page
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+					driver=new ChromeDriver(options);
+					driver.get("https://org-app.regalpayone.com/login");
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 					Thread.sleep(3000);
 
 					this.driver = webDriverFactory.driver;
@@ -53,8 +68,10 @@ public class HomePage extends ExtentReportListener{
 					Thread.sleep(3000);
 					driver.findElement(By.xpath("//button[.='Login']")).click();
 					Thread.sleep(3000);
-					driver.findElement(By.xpath("//input[@id='Username']")).sendKeys("abhishek@regal-us.com");
-					driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("Abhi@123");
+					driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 0, 0));
+					driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 0, 1));
+					/*driver.findElement(By.xpath("//input[@id='Username']")).sendKeys("abhishek@regal-us.com");
+					driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("Abhi@123");*/
 					Thread.sleep(3000);
 					
 					driver.findElement(By.xpath("//button[@value='login']")).click();

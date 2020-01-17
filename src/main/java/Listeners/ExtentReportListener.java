@@ -49,7 +49,10 @@ public class ExtentReportListener {
 			extenttest.error(throwable.fillInStackTrace());
 			
 			try {
+<<<<<<< HEAD
 				
+=======
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 				String screenshotpath=captureScreenShot(driver);
 				extenttest.addScreenCaptureFromPath(screenshotpath);
 				} catch (IOException e) {
@@ -77,8 +80,12 @@ public class ExtentReportListener {
 	public static String captureScreenShot(WebDriver driver) throws IOException {
 		TakesScreenshot screen = (TakesScreenshot) driver;
 		File src = screen.getScreenshotAs(OutputType.FILE);
+<<<<<<< HEAD
 		String dest = System.getProperty("user.dir") + "/screenshots/" + getcurrentdateandtime() + ".png";
 		//String dest = "D:\\Chethan\\screenshots\\" + getcurrentdateandtime() + ".png";
+=======
+				String dest = System.getProperty("user.dir") + "/screenshots/" + getcurrentdateandtime() + ".png";
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 		File target = new File(dest);
 		FileUtils.copyFile(src, target);
 		return dest;

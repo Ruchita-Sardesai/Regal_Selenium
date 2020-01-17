@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+
 import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
@@ -15,9 +16,14 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
+<<<<<<< HEAD
 import com.testautomation.Utility.WebDriverFactory;
+=======
+
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 
 import Listeners.ExtentReportListener;
+import ReusabilityMethods.ExcelDataConfig;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -28,7 +34,9 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	WebDriverFactory webDriverFactory;
 	public static WebDriver driver;
+	ExcelDataConfig excel=new ExcelDataConfig("C:\\\\Users\\\\ruchi\\\\NEW_WorkPlace\\\\Excel Data\\\\TestData(2).xlsx");
 	
+<<<<<<< HEAD
 	
 	public LoginstepDefinition (WebDriverFactory DriverFactory) throws Exception
 	{
@@ -38,6 +46,9 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	 
 	@Given("^User should open the browser$")
+=======
+	 	@Given("^User should open the browser$")
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 	public void Login_Button() 
 	{
 		
@@ -49,10 +60,25 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				
 			  logInfo=test.createNode(new GherkinKeyword("Given"), "User should open the browser");
 			     
+<<<<<<< HEAD
 			   WebDriverFactory.OpenBrowser( "chrome", "https://org-app.regalpayone.com/login"); 
 			   Thread.sleep(3000);
 		
 				this.driver = webDriverFactory.driver;
+=======
+			   ChromeOptions options = new ChromeOptions();
+				options.addArguments("start-maximized"); //to maximize the browser
+				options.addArguments("disable-infobars"); // to disable the infobars
+				options.addArguments("version");//to get the version of Google Chrome
+				
+				//Open the browser
+				//System.setProperty("webdriver.chrome.driver", "C:\\Users\\ruchi\\NEW_WorkPlace\\OrgAdmin\\drivers\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+				driver=new ChromeDriver(options);
+				driver.get("https://org-app.regalpayone.com/login"); 
+			  /*  browserUtility.OpenBrowser(driver, "chrome", "https://org-app.regalpayone.com/login"); */
+				Thread.sleep(3000);
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 				driver.findElement(By.xpath("//button[@id='details-button']")).click();
 				Thread.sleep(3000);
 				driver.findElement(By.xpath("//a[@id='proceed-link']")).click();
@@ -103,7 +129,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	
 	
-	@Then("^User Enters the \"(.*)\" and \"(.*)\"$")
+	@Then("^User Enters the valid credentials")
 	public void Enter_Credentials(String Email,String Password) 
 	{
 		ExtentTest logInfo=null;
@@ -111,8 +137,8 @@ public class LoginstepDefinition  extends ExtentReportListener{
 									
 		logInfo=test.createNode(new GherkinKeyword("Then"), "User Enters the Email and Password");
 		Thread.sleep(9000);
-		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(Email);
-		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(Password);
+		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 0, 0));
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 0, 1));
 		logInfo.pass("User Entered the email and password");
 		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
@@ -124,6 +150,25 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	}
 	
+	@Then("^User Enters the invalid credentials")
+	public void Enter_invalidCredentials(String Email,String Password) 
+	{
+		ExtentTest logInfo=null;
+		try {
+									
+		logInfo=test.createNode(new GherkinKeyword("Then"), "User Enters the Email and Password");
+		Thread.sleep(9000);
+		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 1, 0));
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 1, 1));
+		logInfo.pass("User Entered the email and password");
+		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
+		
+		} catch (AssertionError | Exception e) {
+			testStepHandle("FAIL",driver,logInfo,e);
+			
+		}		
+	
+	}
 	
 	
 	@And("^User clicks on login button$")
