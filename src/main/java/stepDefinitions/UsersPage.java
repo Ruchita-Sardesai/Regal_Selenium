@@ -7,17 +7,33 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
+import com.testautomation.Utility.WebDriverFactory;
 
 import Listeners.ExtentReportListener;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
 public class UsersPage extends ExtentReportListener {
 
+	WebDriverFactory webDriverFactory;
 	public static WebDriver driver;
 	
-	   
 	
-	@Given("^Click on Add users button$")
+	public UsersPage (WebDriverFactory DriverFactory) throws Exception
+	{
+		super();
+		webDriverFactory = new WebDriverFactory();
+	}
+	
+	 
+	@Given("^Launch browser and login$")
+	public void Launch_and_Login()
+	{
+		
+	}
+	
+	
+	@Then("^Click on Add users button$")
 	public void Getin_to_Home_page() 
 	{
 		

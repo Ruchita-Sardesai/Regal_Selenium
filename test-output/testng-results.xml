@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+=======
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2020-01-17T08:46:12Z" name="BDD Test Suite" finished-at="2020-01-17T08:47:49Z" duration-ms="96633">
+=======
   <suite started-at="2020-01-17T07:10:05Z" name="BDD Test Suite" finished-at="2020-01-17T07:12:19Z" duration-ms="134761">
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
     <groups>
       <group name="cucumber">
+<<<<<<< HEAD
+        <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@65d6b83b]" name="feature" class="Runner.TestRunner"/>
+=======
         <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@419c5f1a]" name="feature" class="Runner.TestRunner"/>
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
+    <test started-at="2020-01-17T08:46:12Z" name="OrgAdmin" finished-at="2020-01-17T08:47:49Z" duration-ms="96633">
+=======
     <test started-at="2020-01-17T07:10:05Z" name="OrgAdmin" finished-at="2020-01-17T07:12:19Z" duration-ms="134761">
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
       <class name="Runner.TestRunner">
+<<<<<<< HEAD
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestRunner@65d6b83b]" started-at="2020-01-17T08:46:12Z" name="setUpClass" finished-at="2020-01-17T08:46:13Z" duration-ms="741" status="PASS">
+=======
         <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestRunner@419c5f1a]" started-at="2020-01-17T07:10:05Z" name="setUpClass" finished-at="2020-01-17T07:10:06Z" duration-ms="529" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@65d6b83b]" started-at="2020-01-17T08:46:13Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-17T08:47:49Z" duration-ms="95179" status="PASS">
+=======
         <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@419c5f1a]" started-at="2020-01-17T07:10:06Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-17T07:11:30Z" duration-ms="84658" status="PASS">
           <params>
             <param index="0">
@@ -26,6 +49,7 @@
           </reporter-output>
         </test-method> <!-- feature -->
         <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@419c5f1a]" started-at="2020-01-17T07:11:30Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-17T07:12:19Z" duration-ms="48925" status="FAIL">
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
           <params>
             <param index="0">
               <value>
@@ -33,6 +57,12 @@
               </value>
             </param>
           </params>
+<<<<<<< HEAD
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestRunner@65d6b83b]" started-at="2020-01-17T08:47:49Z" name="tearDownClass" finished-at="2020-01-17T08:47:49Z" duration-ms="19" status="PASS">
+=======
           <exception class="cucumber.runtime.CucumberException">
             <message>
               <![CDATA[cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'stepDefinitions.LoginstepDefinition.Enter_Credentials(String,String) in file:/C:/Users/ruchi/NEW_WorkPlace/OrgAdmin/target/classes/' with pattern [^User Enters the valid credentials] is declared with 2 parameters. However, the gherkin step has 0 arguments []. 
@@ -83,6 +113,7 @@ at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.jav
           </reporter-output>
         </test-method> <!-- feature -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.TestRunner@419c5f1a]" started-at="2020-01-17T07:12:19Z" name="tearDownClass" finished-at="2020-01-17T07:12:19Z" duration-ms="15" status="PASS">
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

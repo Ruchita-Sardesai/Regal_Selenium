@@ -3,8 +3,6 @@ package stepDefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,6 +10,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
+import com.testautomation.Utility.WebDriverFactory;
 
 import Listeners.ExtentReportListener;
 import ReusabilityMethods.CommonMethods;
@@ -23,9 +22,16 @@ import cucumber.api.java.en.Then;
 public class HomePage extends ExtentReportListener{
 
 	
-		public static WebDriver driver;
-		
-		   
+	WebDriverFactory webDriverFactory;
+	public static WebDriver driver;
+	
+	
+	public HomePage (WebDriverFactory DriverFactory) throws Exception
+	{
+		super();
+		webDriverFactory = new WebDriverFactory();
+	}
+	
 		
 		@Given("^User is on the home page$")
 		public void Getin_to_Home_page() 
@@ -37,6 +43,10 @@ public class HomePage extends ExtentReportListener{
 			try {
 									
 				    logInfo=test.createNode(new GherkinKeyword("Given"), "User is on the home page");
+<<<<<<< HEAD
+				
+					WebDriverFactory.OpenBrowser( "chrome", "https://org-app.regalpayone.com/login"); 
+=======
 				    ExcelDataConfig excel=new ExcelDataConfig("C:\\\\Users\\\\ruchi\\\\NEW_WorkPlace\\\\Excel Data\\\\TestData(2).xlsx");
 				    
 				    ChromeOptions options = new ChromeOptions();
@@ -48,7 +58,10 @@ public class HomePage extends ExtentReportListener{
 					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 					driver=new ChromeDriver(options);
 					driver.get("https://org-app.regalpayone.com/login");
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 					Thread.sleep(3000);
+
+					this.driver = webDriverFactory.driver;
 					driver.findElement(By.xpath("//button[@id='details-button']")).click();
 					Thread.sleep(3000);
 					driver.findElement(By.xpath("//a[@id='proceed-link']")).click();

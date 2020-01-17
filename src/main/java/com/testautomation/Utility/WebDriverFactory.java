@@ -7,11 +7,15 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class browserUtility {
+public class WebDriverFactory {
+	
+	public static WebDriver driver;
+	
+	
 
-
-	public static WebDriver OpenBrowser(WebDriver driver,String browserName,String url) throws InterruptedException
+	public static WebDriver OpenBrowser(String browserName,String url) throws InterruptedException
 	{
+		
 		if(browserName.equalsIgnoreCase("Chrome"))
 		{
 			ChromeOptions options = new ChromeOptions();
@@ -20,10 +24,10 @@ public class browserUtility {
 			options.addArguments("version");//to get the version of Google Chrome
 			
 			//Open the browser
-			System.setProperty("webdriver.chrome.driver", "D:\\Chethan\\Timesheet_Project\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 			driver=new ChromeDriver(options);
 			driver.get(url);
-			//return driver;
+			return driver;
 			
 		}
 		
@@ -32,7 +36,7 @@ public class browserUtility {
 			if(browserName.equals("IE"))
 			
 		{
-				System.setProperty("webdriver.ie.driver", "D:\\ruhicta\\Timesheet_Project\\drivers\\IE.exe");
+				System.setProperty("webdriver.ie.driver", "./drivers/IE.exe");
 				DesiredCapabilities capabilities=new DesiredCapabilities();
 				capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, "accept");
 				capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
@@ -48,6 +52,13 @@ public class browserUtility {
 	        return null;
 	
 	}
+	
+	
+public   WebDriver getWebDriver() throws IllegalAccessException{
+	//return dr.get();
+	return driver;
+}
+
 		
 	
 } 

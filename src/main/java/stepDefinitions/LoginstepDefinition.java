@@ -8,8 +8,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,7 +16,11 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.gherkin.model.Feature;
 import com.aventstack.extentreports.gherkin.model.Scenario;
+<<<<<<< HEAD
+import com.testautomation.Utility.WebDriverFactory;
+=======
 
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 
 import Listeners.ExtentReportListener;
 import ReusabilityMethods.ExcelDataConfig;
@@ -30,10 +32,23 @@ import cucumber.api.java.en.When;
 
 public class LoginstepDefinition  extends ExtentReportListener{
 	
+	WebDriverFactory webDriverFactory;
 	public static WebDriver driver;
 	ExcelDataConfig excel=new ExcelDataConfig("C:\\\\Users\\\\ruchi\\\\NEW_WorkPlace\\\\Excel Data\\\\TestData(2).xlsx");
 	
+<<<<<<< HEAD
+	
+	public LoginstepDefinition (WebDriverFactory DriverFactory) throws Exception
+	{
+		super();
+		webDriverFactory = new WebDriverFactory();
+	}
+	
+	 
+	@Given("^User should open the browser$")
+=======
 	 	@Given("^User should open the browser$")
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 	public void Login_Button() 
 	{
 		
@@ -45,6 +60,12 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				
 			  logInfo=test.createNode(new GherkinKeyword("Given"), "User should open the browser");
 			     
+<<<<<<< HEAD
+			   WebDriverFactory.OpenBrowser( "chrome", "https://org-app.regalpayone.com/login"); 
+			   Thread.sleep(3000);
+		
+				this.driver = webDriverFactory.driver;
+=======
 			   ChromeOptions options = new ChromeOptions();
 				options.addArguments("start-maximized"); //to maximize the browser
 				options.addArguments("disable-infobars"); // to disable the infobars
@@ -57,6 +78,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 				driver.get("https://org-app.regalpayone.com/login"); 
 			  /*  browserUtility.OpenBrowser(driver, "chrome", "https://org-app.regalpayone.com/login"); */
 				Thread.sleep(3000);
+>>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
 				driver.findElement(By.xpath("//button[@id='details-button']")).click();
 				Thread.sleep(3000);
 				driver.findElement(By.xpath("//a[@id='proceed-link']")).click();
