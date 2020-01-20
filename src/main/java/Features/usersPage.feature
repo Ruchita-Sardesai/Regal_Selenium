@@ -1,4 +1,4 @@
-@CUserspage
+@Userspage
 Feature: Add users feature
 
 
@@ -7,9 +7,8 @@ Scenario: Add user
 
 //Prequisities
 Given Launch browser and login
-Then click on users button
 Then Click on Add users button
-
+Then Enter the email and select the role and entity
 
 
 

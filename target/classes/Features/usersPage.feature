@@ -1,16 +1,15 @@
 @Userspage
-Feature: Add users
+Feature: Add users feature
 
-Scenario Outline: Verify user is able to Add user
 
-Given Click on Add users button
-Then Enter the Email into the emailbox
-Then select the role from the checkbox
-Then select the entities
-And click on Save button
+@Userlogin1
+Scenario: Add user 
 
-Examples:
-    | Email |
-    | abhishek@regal-us.com |
+//Prequisities
+Given Launch browser and login
+Then Click on Add users button
+Then Enter the email and select the role and entity
+
+
 
  
