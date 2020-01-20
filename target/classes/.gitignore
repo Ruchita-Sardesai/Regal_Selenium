@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-/META-INF/
-/com/
+/stepDefinitions/
+/Features/
 /Runner/
-/stepDefinitions/
-/Features/
-/Listeners/
-=======
-/ReadExcelData/
 /ReusabilityMethods/
-/stepDefinitions/
-/com/
-/Listeners/
-/Features/
->>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git

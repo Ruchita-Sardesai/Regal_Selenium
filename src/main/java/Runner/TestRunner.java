@@ -9,11 +9,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
-<<<<<<< HEAD
+
 
 
 @CucumberOptions(
-        features = "src/main/java/Features" , tags="@Login" ,
+        features = "src/main/java/Features" , tags="@Userspage" ,
         glue = {"stepDefinitions"},
       //  tags = {"@Regression"},
         strict=true,
@@ -24,17 +24,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"
         },plugin = "json:target/cucumber-reports/CucumberTestReport.json") */
-=======
-@CucumberOptions(features = "src/main/java/Features", tags = "@Login,@HomePage", glue = { "stepDefinitions" },
-		// tags = {"@Regression"},
-		strict = true, dryRun = false)
-/*
- * format = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
- * "json:target/cucumber-reports/CucumberTestReport.json",
- * "rerun:target/cucumber-reports/rerun.txt" },plugin =
- * "json:target/cucumber-reports/CucumberTestReport.json")
- */
->>>>>>> branch 'master' of https://github.com/Ruchita-Sardesai/Regal_Selenium.git
+
 
 public class TestRunner {
 	private TestNGCucumberRunner testNGCucumberRunner;
