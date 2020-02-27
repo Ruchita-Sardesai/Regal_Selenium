@@ -2,19 +2,16 @@
 Feature: Add Roles
 
 
-Scenario Outline: Verify user is able to Add role
+Scenario: Verify user is able to Add role
 
-Given Click on roles button
+Given Login for Roles
+Then Click on roles button
 Then Click on Add role button
 Then Add the role name
 Then select the role level
 Then select the role permissions
-And click on Save button
-
-
-
-Examples:
-    | Email |
-    | abhishek@regal-us.com |
-
- 
+Then click on Save button
+Then verify Role created succesfully
+Then Search the Role in the search box
+Then Verify Manage Role
+Then Verify Manage Members

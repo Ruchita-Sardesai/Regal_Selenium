@@ -30,7 +30,7 @@ public class LoginstepDefinition  extends ExtentReportListener{
 	
 	WebDriverFactory webDriverFactory;
 	public static WebDriver driver;
-	ExcelDataConfig excel=new ExcelDataConfig("C:\\Users\\DELL\\git\\Regal_Selenium\\Regal_Selenium\\TestData(2).xlsx");
+	ExcelDataConfig excel=new ExcelDataConfig();
 	
 
 	
@@ -119,8 +119,10 @@ public class LoginstepDefinition  extends ExtentReportListener{
 									
 		logInfo=test.createNode(new GherkinKeyword("Then"), "User Enters the valid credentials");
 		Thread.sleep(9000);
-		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 0, 0));
-		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 0, 1));
+		//driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 0, 0));
+		//driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0, 0, 1));
+		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData("Credentials", 0, 0));
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData("Credentials", 0, 1));
 		logInfo.pass("User Entered the email and password");
 		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
@@ -140,8 +142,10 @@ public class LoginstepDefinition  extends ExtentReportListener{
 									
 		logInfo=test.createNode(new GherkinKeyword("Then"), "User Enters the invalid credentials");
 		Thread.sleep(9000);
-		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 1, 0));
-		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0,1 , 1));
+		//driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData(0, 1, 0));
+		//driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData(0,1 , 1));
+		driver.findElement(By.xpath("//input[@id='Username']")).sendKeys(excel.getData("Credentials", 0, 0));
+		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys(excel.getData("Credentials", 0, 1));
 		logInfo.pass("User Entered the invalid email and password");
 		logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
